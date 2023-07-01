@@ -17,9 +17,6 @@ import FullScreenSection from "./FullScreenSection";
 import useSubmit from "../hooks/useSubmit";
 import { useAlertContext } from "../context/alertContext";
 
-/**
- * Covers a complete form implementation using formik and yup for validation
- */
 const ContactMeSection = () => {
   const { isLoading, response, submit } = useSubmit();
   const { onOpen } = useAlertContext();
@@ -59,13 +56,19 @@ const ContactMeSection = () => {
       py={16}
       spacing={8}
     >
-      <VStack w="1024px" p={32} alignItems="flex-start">
+      <VStack
+        p={8}
+        alignItems="center"
+        spacing={4}
+        maxW="1024px"
+        mx="auto"
+      >
         <Heading as="h1" id="contactme-section">
           Contact me
         </Heading>
-        <Box p={6} rounded="md" w="100%">
+        <Box rounded="md" w="100%" maxW="500px">
           <form onSubmit={formik.handleSubmit}>
-            <VStack spacing={4}>
+            <VStack spacing={4} alignItems="stretch">
               <FormControl
                 isInvalid={
                   !!formik.errors.firstName && formik.touched.firstName
@@ -116,7 +119,6 @@ const ContactMeSection = () => {
               <Button
                 type="submit"
                 colorScheme="purple"
-                width="full"
                 isLoading={isLoading}
               >
                 Submit
@@ -125,6 +127,15 @@ const ContactMeSection = () => {
           </form>
         </Box>
       </VStack>
+
+      <style jsx>{`
+        @media (max-width: 768px) {
+          /* Styles for small screens and mobile devices */
+          .contact-me-section {
+            padding: 16px;
+          }
+        }
+      `}</style>
     </FullScreenSection>
   );
 };
