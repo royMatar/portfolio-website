@@ -118,7 +118,7 @@ const ContactMeSection = () => {
               </FormControl>
               <Button
                 type="submit"
-                colorScheme="purple"
+                colorScheme="blue"
                 isLoading={isLoading}
               >
                 Submit
