@@ -17,6 +17,7 @@ import FullScreenSection from "./FullScreenSection";
 import useSubmit from "../hooks/useSubmit";
 import { useAlertContext } from "../context/alertContext";
 
+
 const ContactMeSection = () => {
   const { isLoading, response, submit } = useSubmit();
   const { onOpen } = useAlertContext();
@@ -94,14 +95,14 @@ const ContactMeSection = () => {
                 />
                 <FormErrorMessage>{formik.errors.email}</FormErrorMessage>
               </FormControl>
-              <FormControl>
-                <FormLabel htmlFor="type">Type of enquiry</FormLabel>
+              <FormControl style={{ backgroundColor: 'black'}}>
+                <FormLabel htmlFor="type" >Type of enquiry</FormLabel>
                 <Select id="type" name="type" {...formik.getFieldProps("type")}>
-                  <option value="hireMe">Freelance project proposal</option>
-                  <option value="openSource">
+                  <option value="hireMe" style={{ backgroundColor: 'black' }}>Freelance project proposal</option>
+                  <option value="openSource" style={{ backgroundColor: 'black' }}>
                     Open source consultancy session
                   </option>
-                  <option value="other">Other</option>
+                  <option value="other" style={{ backgroundColor: 'black' }}>Other</option>
                 </Select>
               </FormControl>
               <FormControl

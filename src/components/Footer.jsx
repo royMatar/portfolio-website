@@ -3,7 +3,7 @@ import { Box, Flex } from "@chakra-ui/react";
 
 const Footer = () => {
   return (
-    <Box backgroundColor="#18181b">
+    <Box backgroundColor="#111111">
       <footer>
         <Flex
           margin="0 auto"
