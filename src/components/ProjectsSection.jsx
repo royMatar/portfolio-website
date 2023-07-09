@@ -4,12 +4,21 @@ import { Box, Heading } from "@chakra-ui/react";
 import Card from "./Card";
 
 const projects = [
-  // {
-  //   title: "React Space",
-  //   description:
-  //     "Handy tool belt to create amazing AR components in a React app, with redux integration via middleware️",
-  //   getImageSrc: () => require("../images/photo1.jpg"),
-  // },
+  {
+    title: "Little Lemon Restaurant",
+    description:
+      "The Little Lemon restaurant website, part of the Meta Front-End Developer Professional Certificate Capstone Project, aims to create a responsive UI for the booking table component. Figma was used for design, while React, CSS, Bootstrap, and other UI libraries were employed for development. The goal is to ensure optimal user experience on various devices and screen sizes.",
+      image: "profile.jpeg",
+      url: "https://github.com/royMatar/little-lemon",
+  },
+  {
+    title: "Little Lemon Restaurant",
+    description:
+      "The Little Lemon restaurant website, part of the Meta Front-End Developer Professional Certificate Capstone Project, aims to create a responsive UI for the booking table component. Figma was used for design, while React, CSS, Bootstrap, and other UI libraries were employed for development. The goal is to ensure optimal user experience on various devices and screen sizes.",
+      image: "profile.jpeg",
+      url: "https://github.com/royMatar/little-lemon",
+  },
+  
   // {
   //   title: "React Infinite Scroll",
   //   description:
@@ -40,11 +49,12 @@ const ProjectsSection = () => {
       spacing={8}
     >
       <Heading as="h1" id="projects-section">
-        Featured Projects
+        Projects
       </Heading>
+
       <Box
         display="grid"
-        gridTemplateColumns="repeat(2,minmax(0,1fr))"
+        gridTemplateColumns="repeat(auto-fit, minmax(250px, 1fr))"
         gridGap={8}
       >
         {projects.map((project) => (
@@ -52,8 +62,8 @@ const ProjectsSection = () => {
             key={project.title}
             title={project.title}
             description={project.description}
-            url="https://github.com/rgommezz/react-native-offline"
-            imageSrc={project.getImageSrc()}
+            url={project.url}
+            imageSrc={project.image}
           />
         ))}
       </Box>
