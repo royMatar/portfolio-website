@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import { AlertProvider } from "./context/alertContext";
 import Alert from "./components/Alert";
 import "./App.css";
+import AboutSection from "./components/AboutSection";
 function App() {
   return (
     <ChakraProvider>
@@ -14,6 +15,7 @@ function App() {
         <main>
           <Header />
           <LandingSection />
+          <AboutSection/>
           <ProjectsSection />
           <ContactMeSection />
           <Footer />

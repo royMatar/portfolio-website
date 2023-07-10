@@ -75,7 +75,7 @@ const ContactMeSection = () => {
                   !!formik.errors.firstName && formik.touched.firstName
                 }
               >
-                <FormLabel htmlFor="firstName">Name</FormLabel>
+                <FormLabel htmlFor="firstName">Name<span>*</span></FormLabel>
                 <Input
                   id="firstName"
                   name="firstName"
@@ -86,7 +86,7 @@ const ContactMeSection = () => {
               <FormControl
                 isInvalid={!!formik.errors.email && formik.touched.email}
               >
-                <FormLabel htmlFor="email">Email Address</FormLabel>
+                <FormLabel htmlFor="email">Email Address<span>*</span></FormLabel>
                 <Input
                   id="email"
                   name="email"
@@ -108,7 +108,7 @@ const ContactMeSection = () => {
               <FormControl
                 isInvalid={!!formik.errors.comment && formik.touched.comment}
               >
-                <FormLabel htmlFor="comment">Your message</FormLabel>
+                <FormLabel htmlFor="comment">Your message<span>*</span></FormLabel>
                 <Textarea
                   id="comment"
                   name="comment"
@@ -129,14 +129,6 @@ const ContactMeSection = () => {
         </Box>
       </VStack>
 
-      <style jsx>{`
-        @media (max-width: 768px) {
-          /* Styles for small screens and mobile devices */
-          .contact-me-section {
-            padding: 16px;
-          }
-        }
-      `}</style>
     </FullScreenSection>
   );
 };
