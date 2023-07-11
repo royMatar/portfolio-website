@@ -65,7 +65,7 @@ const ContactMeSection = () => {
         mx="auto"
       >
         <Heading as="h1" id="contactme-section">
-          Contact me
+          Contact
         </Heading>
         <Box rounded="md" w="100%" maxW="500px">
           <form onSubmit={formik.handleSubmit}>
@@ -75,7 +75,7 @@ const ContactMeSection = () => {
                   !!formik.errors.firstName && formik.touched.firstName
                 }
               >
-                <FormLabel htmlFor="firstName">Name<span>*</span></FormLabel>
+                <FormLabel htmlFor="firstName">Name <span>*</span></FormLabel>
                 <Input
                   id="firstName"
                   name="firstName"
@@ -86,7 +86,7 @@ const ContactMeSection = () => {
               <FormControl
                 isInvalid={!!formik.errors.email && formik.touched.email}
               >
-                <FormLabel htmlFor="email">Email Address<span>*</span></FormLabel>
+                <FormLabel htmlFor="email">Email Address <span>*</span></FormLabel>
                 <Input
                   id="email"
                   name="email"
@@ -95,7 +95,7 @@ const ContactMeSection = () => {
                 />
                 <FormErrorMessage>{formik.errors.email}</FormErrorMessage>
               </FormControl>
-              <FormControl style={{ backgroundColor: 'black'}}>
+              {/* <FormControl style={{ backgroundColor: 'black'}}>
                 <FormLabel htmlFor="type" >Type of enquiry</FormLabel>
                 <Select id="type" name="type" {...formik.getFieldProps("type")}>
                   <option value="hireMe" style={{ backgroundColor: 'black' }}>Freelance project proposal</option>
@@ -104,11 +104,11 @@ const ContactMeSection = () => {
                   </option>
                   <option value="other" style={{ backgroundColor: 'black' }}>Other</option>
                 </Select>
-              </FormControl>
+              </FormControl> */}
               <FormControl
                 isInvalid={!!formik.errors.comment && formik.touched.comment}
               >
-                <FormLabel htmlFor="comment">Your message<span>*</span></FormLabel>
+                <FormLabel htmlFor="comment">Your message <span>*</span></FormLabel>
                 <Textarea
                   id="comment"
                   name="comment"
