@@ -1,10 +1,10 @@
 import React from "react";
-import { Avatar, Heading, VStack } from "@chakra-ui/react";
+import { Avatar, Heading, VStack, Box } from "@chakra-ui/react";
 import FullScreenSection from "./FullScreenSection";
 
 const greeting = "Hello, I am Roy!";
 const bio1 = "A Frontend Developer";
-const bio2 = "Specialized in React";
+const bio2 = "Specialized in ";
 
 const LandingSection = () => (
   <FullScreenSection
@@ -14,22 +14,22 @@ const LandingSection = () => (
     backgroundColor="#000000"
   >
     <VStack spacing={16}>
-      <VStack spacing={4} alignItems="center">
+      <VStack spacing={4} alignItems="center" >
         <Avatar
           src="profile.jpeg"
           size="2xl"
           name="Your Name"
         />
-        <Heading as="h4" size="md" noOfLines={1}>
+        <Heading as="h4" size="md" noOfLines={2}>
           {greeting}
         </Heading>
       </VStack>
       <VStack spacing={10}>
-        <Heading as="h1" size="3xl" noOfLines={1}>
+        <Heading as="h1" size="3xl" noOfLines={2} textAlign="center">
           {bio1}
         </Heading>
-        <Heading as="h1" size="3xl" noOfLines={1}>
-          {bio2}
+        <Heading as="h1" size="3xl" noOfLines={3} textAlign="center">
+          {bio2} <span className="bluecolor">React</span>
         </Heading>
       </VStack>
     </VStack>

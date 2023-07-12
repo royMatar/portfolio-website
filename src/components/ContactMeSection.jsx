@@ -16,7 +16,7 @@ import * as Yup from "yup";
 import FullScreenSection from "./FullScreenSection";
 import useSubmit from "../hooks/useSubmit";
 import { useAlertContext } from "../context/alertContext";
-
+import "../App.css";
 
 const ContactMeSection = () => {
   const { isLoading, response, submit } = useSubmit();
@@ -62,10 +62,12 @@ const ContactMeSection = () => {
         alignItems="center"
         spacing={4}
         maxW="1024px"
+        width="650px"
         mx="auto"
+        id="contactform"
       >
-        <Heading as="h1" id="contactme-section">
-          Contact
+        <Heading as="h3" id="contactme-section">
+          Contact Me
         </Heading>
         <Box rounded="md" w="100%" maxW="500px">
           <form onSubmit={formik.handleSubmit}>
@@ -75,7 +77,9 @@ const ContactMeSection = () => {
                   !!formik.errors.firstName && formik.touched.firstName
                 }
               >
-                <FormLabel htmlFor="firstName">Name <span>*</span></FormLabel>
+                <FormLabel htmlFor="firstName">
+                  Name <span className="bluecolor">*</span>
+                </FormLabel>
                 <Input
                   id="firstName"
                   name="firstName"
@@ -86,7 +90,9 @@ const ContactMeSection = () => {
               <FormControl
                 isInvalid={!!formik.errors.email && formik.touched.email}
               >
-                <FormLabel htmlFor="email">Email Address <span>*</span></FormLabel>
+                <FormLabel htmlFor="email">
+                  Email Address <span className="bluecolor">*</span>
+                </FormLabel>
                 <Input
                   id="email"
                   name="email"
@@ -108,7 +114,9 @@ const ContactMeSection = () => {
               <FormControl
                 isInvalid={!!formik.errors.comment && formik.touched.comment}
               >
-                <FormLabel htmlFor="comment">Your message <span>*</span></FormLabel>
+                <FormLabel htmlFor="comment">
+                  Your message <span className="bluecolor">*</span>
+                </FormLabel>
                 <Textarea
                   id="comment"
                   name="comment"
@@ -117,18 +125,13 @@ const ContactMeSection = () => {
                 />
                 <FormErrorMessage>{formik.errors.comment}</FormErrorMessage>
               </FormControl>
-              <Button
-                type="submit"
-                colorScheme="blue"
-                isLoading={isLoading}
-              >
+              <Button type="submit" colorScheme="blue" isLoading={isLoading}>
                 Submit
               </Button>
             </VStack>
           </form>
         </Box>
       </VStack>
-
     </FullScreenSection>
   );
 };

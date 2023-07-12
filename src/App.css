@@ -19,6 +19,7 @@
     Box {
         grid-template-columns: repeat(3, minmax(250px, 1fr));
     }
+    
 }
 
 /* CSS File */
@@ -45,4 +46,15 @@ a>svg {
 
 a:hover>svg {
     color: #1e80ff;
+}
+
+.bluecolor{
+    color: #1e80ff;
+}
+
+@media screen and (max-width: 600px) {
+    #contactform{
+        width: 350px;
+    }
+    
 }

@@ -1,4 +1,4 @@
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, Divider } from "@chakra-ui/react";
 import Header from "./components/Header";
 import LandingSection from "./components/LandingSection";
 import ProjectsSection from "./components/ProjectsSection";
@@ -8,6 +8,7 @@ import { AlertProvider } from "./context/alertContext";
 import Alert from "./components/Alert";
 import "./App.css";
 import AboutSection from "./components/AboutSection";
+
 function App() {
   return (
     <ChakraProvider>
@@ -15,9 +16,10 @@ function App() {
         <main>
           <Header />
           <LandingSection />
-          <AboutSection/>
+          <AboutSection />
           <ProjectsSection />
           <ContactMeSection />
+          <Divider/>
           <Footer />
           <Alert />
         </main>

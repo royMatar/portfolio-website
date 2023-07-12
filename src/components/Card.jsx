@@ -7,10 +7,12 @@ import { VStack, HStack, Heading, Text, Image } from "@chakra-ui/react";
 const Card = ({ title, description, imageSrc }) => {
   return (
     <VStack
-      color="black"
-      backgroundColor="white"
+      color="white"
+      backgroundColor="black"
       cursor="pointer"
       borderRadius="xl"
+      borderWidth={1}
+      borderColor="white"
     >
       <Image borderRadius="xl" src={imageSrc} alt={title} />
       <VStack spacing={4} p={4} alignItems="flex-start">
@@ -22,8 +24,8 @@ const Card = ({ title, description, imageSrc }) => {
         <Text color="#64748b" fontSize="lg">
           {description}
         </Text>
-        <HStack spacing={2} alignItems="center">
-          <p>See more</p>
+        <HStack spacing={2} alignItems="center" color="#1e80ff">
+          <span>See more</span>
           <FontAwesomeIcon icon={faArrowRight} size="1x" />
         </HStack>
       </VStack>
