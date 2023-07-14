@@ -29,8 +29,28 @@ const ContactMeSection = () => {
       type: "hireMe",
       comment: "",
     },
-    onSubmit: (values) => {
-      submit("https://john.com/contactme", values);
+    onSubmit: async (values) => {
+      try {
+        const response = await fetch("https://formspree.io/f/mknaapwp", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(values),
+        });
+        if (response.ok) {
+          // Form submission successful
+          onOpen("success", "Form submitted successfully");
+          formik.resetForm();
+        } else {
+          // Form submission failed
+          const data = await response.json();
+          onOpen("error", data.error);
+        }
+      } catch (error) {
+        // Request error
+        onOpen("error", "An error occurred while submitting the form");
+      }
     },
     validationSchema: Yup.object({
       firstName: Yup.string().required("Required"),
