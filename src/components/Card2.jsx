@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { VStack, HStack, Heading, Text, Image } from "@chakra-ui/react";
 import { useMediaQuery } from "react-responsive";
 
-const Card = ({ title, description, imageSrc }) => {
+const CardLeft = ({ title, description, imageSrc }) => {
   const isMobile = useMediaQuery({ maxWidth: 600 });
   const [isHovered, setIsHovered] = useState(false);
 
@@ -17,9 +17,10 @@ const Card = ({ title, description, imageSrc }) => {
           cursor="pointer"
           borderRadius="xl"
           borderWidth={1}
-          borderColor={ "white"}
+          borderColor={"white"}
         >
           <Image borderRadius="xl" src={imageSrc} alt={title} width={350} />
+
           <VStack spacing={4} p={4} alignItems="flex-start">
             <HStack justifyContent="space-between" alignItems="center">
               <Heading as="h3" size="md">
@@ -46,7 +47,6 @@ const Card = ({ title, description, imageSrc }) => {
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
-          <Image borderRadius="xl" src={imageSrc} alt={title} width={450} />
           <VStack spacing={4} p={4} alignItems="flex-start">
             <HStack justifyContent="space-between" alignItems="center">
               <Heading as="h3" size="md">
@@ -61,10 +61,11 @@ const Card = ({ title, description, imageSrc }) => {
               <FontAwesomeIcon icon={faArrowRight} size="1x" />
             </HStack>
           </VStack>
+          <Image borderRadius="xl" src={imageSrc} alt={title} width={450} />
         </HStack>
       )}
     </>
   );
 };
 
-export default Card;
+export default CardLeft;

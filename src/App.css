@@ -52,6 +52,7 @@ a:hover>svg {
     color: #1e80ff;
 }
 
+
 @media screen and (max-width: 600px) {
     #contactform{
         width: 350px;

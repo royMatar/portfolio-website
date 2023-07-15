@@ -1,24 +1,11 @@
 import React from "react";
 import FullScreenSection from "./FullScreenSection";
-import { Box, Heading } from "@chakra-ui/react";
+import { Box, Heading, HStack, VStack } from "@chakra-ui/react";
 import Card from "./Card";
+import CardLeft from "./Card2";
 
-const projects = [
-  {
-    title: "Little Lemon Restaurant",
-    description:
-      "The Little Lemon restaurant website, part of the Meta Front-End Developer Professional Certificate Capstone Project, aims to create a responsive UI for the booking table component. Figma was used for design, while React, CSS, Bootstrap, and other UI libraries were employed for development. The goal is to ensure optimal user experience on various devices and screen sizes.",
-      image: "profile.jpeg",
-      url: "https://github.com/royMatar/little-lemon",
-  },
-  {
-    title: "Little Lemon Restaurant",
-    description:
-      "The Little Lemon restaurant website, part of the Meta Front-End Developer Professional Certificate Capstone Project, aims to create a responsive UI for the booking table component. Figma was used for design, while React, CSS, Bootstrap, and other UI libraries were employed for development. The goal is to ensure optimal user experience on various devices and screen sizes.",
-      image: "profile.jpeg",
-      url: "https://github.com/royMatar/little-lemon",
-  },
-];
+
+// url: "https://github.com/royMatar/little-lemon",
 
 const ProjectsSection = () => {
   return (
@@ -26,7 +13,7 @@ const ProjectsSection = () => {
       backgroundColor="#000000"
       isDarkBackground
       p={8}
-      spacing={8}
+      spacing={24}
     >
       <Heading as="h1" id="projects-section">
         Projects
@@ -37,15 +24,23 @@ const ProjectsSection = () => {
         gridTemplateColumns="repeat(auto-fit, minmax(250px, 1fr))"
         gridGap={8}
       >
-        {projects.map((project) => (
-          <Card
-            key={project.title}
-            title={project.title}
-            description={project.description}
-            url={project.url}
-            imageSrc={project.image}
-          />
-        ))}
+        <VStack spacing={32}>
+        <Card
+          title={"Little Lemon Restaurant"}
+          description={
+            "The Little Lemon restaurant website, part of the Meta Front-End Developer Professional Certificate Capstone Project, aims to create a responsive UI for the booking table component. Figma was used for design, while React, CSS, Bootstrap, and other UI libraries were employed for development. The goal is to ensure optimal user experience on various devices and screen sizes."
+          }
+          imageSrc={"littlelemon.png"}
+        />
+        <CardLeft
+          title={"Little Lemon Restaurant"}
+          description={
+            "The Little Lemon restaurant website, part of the Meta Front-End Developer Professional Certificate Capstone Project, aims to create a responsive UI for the booking table component. Figma was used for design, while React, CSS, Bootstrap, and other UI libraries were employed for development. The goal is to ensure optimal user experience on various devices and screen sizes."
+          }
+          imageSrc={"littlelemon.png"}
+        />
+        </VStack>
+        
       </Box>
     </FullScreenSection>
   );
