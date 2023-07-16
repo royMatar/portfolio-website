@@ -107,20 +107,42 @@ const AboutSection = () => {
             <Tooltip label="ISTP">Personality type</Tooltip>
           </span>{" "}
           shows, i'm built to tackle problems and build cool stuff, with a great
-          interest in cryptocurrencies. You can check my <Link className="textblue" color={"#1e80ff"} onClick={handleClick("projects")}>Projects</Link> section to see
-          my latest work.
+          interest in cryptocurrencies. You can check my{" "}
+          <Link
+            className="textblue"
+            color={"#1e80ff"}
+            onClick={handleClick("projects")}
+          >
+            Projects
+          </Link>{" "}
+          section to see my latest work.
         </Text>
         <br />
         <Text fontSize={{ base: "lg", md: "xl" }}>
+          Feel free to{" "}
+          <Link
+            className="textblue"
+            color={"#1e80ff"}
+            onClick={handleClick("contactme")}
+          >
+            Contact me
+          </Link>{" "}
+          and let's work together or be part of your team!
+        </Text>
+        <br />
+
+        <Text
+          fontSize={{ base: "lg", md: "xl" }}
+          fontStyle="italic"
+          fontWeight="bold"
+          textAlign="center"
+          color="gray.600"
+        >
           "The biggest risk is not taking any risk. In a world that's changing
           quickly, the only strategy that is guaranteed to fail is not taking
           risks." - Mark Zuckerberg .
         </Text>
-        <br />
-        <Text fontSize={{ base: "lg", md: "xl" }}>
-          Feel free to <Link className="textblue" color={"#1e80ff"} onClick={handleClick("contactme")}>Contact me</Link> and let's work together or be part of your
-          team!
-        </Text>
+
         {/* <SlickAutoPlay /> */}
       </Box>
     </FullScreenSection>
