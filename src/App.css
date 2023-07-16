@@ -19,7 +19,7 @@
     Box {
         grid-template-columns: repeat(3, minmax(250px, 1fr));
     }
-    
+
 }
 
 /* CSS File */
@@ -48,17 +48,23 @@ a:hover>svg {
     color: #1e80ff;
 }
 
-.bluecolor{
+.bluecolor {
     color: #1e80ff;
 }
 
-
-@media screen and (max-width: 800px) {
-    #contactform{
-        width: 350px;
-    }
-    .slick-slider {
-        max-width: 300px; /* Adjust the width of the slider container */
-      }
+.textblue {
+    color: #1e80ff;
+    font-weight: bold;
+    font-size: larger;
 }
 
+@media screen and (max-width: 800px) {
+    #contactform {
+        width: 350px;
+    }
+
+    .slick-slider {
+        max-width: 300px;
+        /* Adjust the width of the slider container */
+    }
+}

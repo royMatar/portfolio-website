@@ -3,6 +3,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Box, HStack, useMediaQuery } from "@chakra-ui/react";
 import { socials } from "./Socials";
 
+export const handleClick = (anchor) => () => {
+  const id = `${anchor}-section`;
+  const element = document.getElementById(id);
+  if (element) {
+    element.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }
+};
+
 const Header = () => {
   const headerRef = useRef(null);
   const [isSmallScreen] = useMediaQuery("(max-width: 768px)"); // Adjust the screen size as per your needs
@@ -30,16 +41,8 @@ const Header = () => {
     };
   }, []);
 
-  const handleClick = (anchor) => () => {
-    const id = `${anchor}-section`;
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-  };
+
+  
 
   return (
     <Box
