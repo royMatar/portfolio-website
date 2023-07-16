@@ -53,9 +53,12 @@ a:hover>svg {
 }
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
     #contactform{
         width: 350px;
     }
-    
+    .slick-slider {
+        max-width: 300px; /* Adjust the width of the slider container */
+      }
 }
+

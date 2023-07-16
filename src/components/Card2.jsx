@@ -5,7 +5,7 @@ import { VStack, HStack, Heading, Text, Image } from "@chakra-ui/react";
 import { useMediaQuery } from "react-responsive";
 
 const CardLeft = ({ title, description, imageSrc }) => {
-  const isMobile = useMediaQuery({ maxWidth: 600 });
+  const isMobile = useMediaQuery({ maxWidth: 750 });
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -17,7 +17,12 @@ const CardLeft = ({ title, description, imageSrc }) => {
           cursor="pointer"
           borderRadius="xl"
           borderWidth={1}
-          borderColor={"white"}
+          borderColor={isHovered ? "#1e80ff" : "black"}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+          style={{
+            transition: "border-color 0.3s ease" // Add the transition property
+          }}
         >
           <Image borderRadius="xl" src={imageSrc} alt={title} width={350} />
 
@@ -43,9 +48,12 @@ const CardLeft = ({ title, description, imageSrc }) => {
           cursor="pointer"
           borderRadius="xl"
           borderWidth={1}
-          borderColor={isHovered ? "#1e80ff" : "white"}
+          borderColor={isHovered ? "#1e80ff" : "black"}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
+          style={{
+            transition: "border-color 0.3s ease" // Add the transition property
+          }}
         >
           <VStack spacing={4} p={4} alignItems="flex-start">
             <HStack justifyContent="space-between" alignItems="center">
