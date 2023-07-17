@@ -7,11 +7,15 @@ import { useMediaQuery } from "react-responsive";
 const CardLeft = ({ title, description, imageSrc }) => {
   const isMobile = useMediaQuery({ maxWidth: 750 });
   const [isHovered, setIsHovered] = useState(false);
+  const openGithubUrl = () => {
+    window.open(`https://github.com/royMatar/little-lemon`, "_blank");
+  };
 
   return (
     <>
       {isMobile ? (
         <VStack
+          onClick={openGithubUrl}
           color="white"
           backgroundColor="black"
           cursor="pointer"
@@ -21,14 +25,14 @@ const CardLeft = ({ title, description, imageSrc }) => {
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
           style={{
-            transition: "border-color 0.3s ease" // Add the transition property
+            transition: "border-color 0.3s ease", // Add the transition property
           }}
         >
           <Image borderRadius="xl" src={imageSrc} alt={title} width={350} />
 
           <VStack spacing={4} p={4} alignItems="flex-start">
             <HStack justifyContent="space-between" alignItems="center">
-              <Heading as="h3" size="md">
+              <Heading as="h3" size="lg">
                 {title}
               </Heading>
             </HStack>
@@ -43,6 +47,7 @@ const CardLeft = ({ title, description, imageSrc }) => {
         </VStack>
       ) : (
         <HStack
+          onClick={openGithubUrl}
           color="white"
           backgroundColor="black"
           cursor="pointer"
@@ -52,12 +57,12 @@ const CardLeft = ({ title, description, imageSrc }) => {
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
           style={{
-            transition: "border-color 0.3s ease" // Add the transition property
+            transition: "border-color 0.3s ease", // Add the transition property
           }}
         >
           <VStack spacing={4} p={4} alignItems="flex-start">
             <HStack justifyContent="space-between" alignItems="center">
-              <Heading as="h3" size="md">
+              <Heading as="h3" size="lg">
                 {title}
               </Heading>
             </HStack>

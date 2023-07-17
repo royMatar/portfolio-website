@@ -42,7 +42,7 @@ const AboutSection = () => {
         margin="20px"
       >
         <Text fontSize={{ base: "lg", md: "xl" }}>
-          I am a <span className="textblue">Mechanical Engineer</span> turned
+          I'm a <span className="textblue">Mechanical Engineer</span> turned
           <span className="textblue"> React Developer</span>, studied
           engineering in Beirut, Lebanon. I've also dabbled in various courses,
           and professional certificates like the{" "}
@@ -50,6 +50,7 @@ const AboutSection = () => {
             href="https://www.coursera.org/account/accomplishments/specialization/certificate/6WTDQ63QYAD3"
             isExternal
             className="textblue"
+            color={"#1e80ff"}
           >
             Meta Front-End Developer Professional Certificate{" "}
             <ExternalLinkIcon mx="2px" />
@@ -60,7 +61,7 @@ const AboutSection = () => {
           My background includes a ton of experience in MEP (Mechanical,
           Electrical and Plumbing) design and on-site work. In addition i got
           some serious skills in automation and telecom power infrastructure
-          specifically in the operation and maintenance department.{" "}
+          specifically in the operation and maintenance department.{" "} 
           <Link
             className="textblue"
             color={"#1e80ff"}
@@ -68,7 +69,7 @@ const AboutSection = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Download my CV
+          Download my CV
           </Link>{" "}
           for more info.
         </Text>
@@ -77,7 +78,7 @@ const AboutSection = () => {
           When it comes to web development, i've got a toolkit full of HTML,
           CSS, JavaScript ES6, React and expertise in libraries like Bootstrap,
           ChakraUI.... Beyond traditional development, I'm highly passionate
-          about exploring cutting-edge technologies, including cryptocurrencies,
+          about exploring cutting-edge technologies, such as AR/VR, cryptocurrencies,
           blockchain, and DeFi{" "}
           <Tooltip label={`$ ${bitcoinPrice}`}>
             <Image
@@ -106,8 +107,7 @@ const AboutSection = () => {
           <span className="textblue">
             <Tooltip label="ISTP">Personality type</Tooltip>
           </span>{" "}
-          shows, i'm built to tackle problems and build cool stuff, with a great
-          interest in cryptocurrencies. You can check my{" "}
+          shows, i'm built to tackle problems and build cool stuff. You can check my{" "}
           <Link
             className="textblue"
             color={"#1e80ff"}
