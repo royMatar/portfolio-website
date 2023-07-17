@@ -43,7 +43,7 @@ const AboutSection = () => {
       >
         <Text fontSize={{ base: "lg", md: "xl" }}>
           I'm a <span className="textblue">Mechanical Engineer</span> turned
-          <span className="textblue"> React Developer</span>, studied
+          <span className="textblue"> Front-End Developer</span>, studied
           engineering in Beirut, Lebanon. I've also dabbled in various courses,
           and professional certificates like the{" "}
           <Link
@@ -58,7 +58,7 @@ const AboutSection = () => {
         </Text>
         <br />
         <Text fontSize={{ base: "lg", md: "xl" }}>
-          My background includes a ton of experience in MEP (Mechanical,
+          My background includes 6+ years of experience in MEP (Mechanical,
           Electrical and Plumbing) design and on-site work. In addition i got
           some serious skills in automation and telecom power infrastructure
           specifically in the operation and maintenance department.{" "} 
@@ -76,11 +76,11 @@ const AboutSection = () => {
         <br />
         <Text fontSize={{ base: "lg", md: "xl" }}>
           When it comes to web development, i've got a toolkit full of HTML,
-          CSS, JavaScript ES6, React and expertise in libraries like Bootstrap,
-          ChakraUI.... Beyond traditional development, I'm highly passionate
-          about exploring cutting-edge technologies, such as AR/VR, cryptocurrencies,
+          CSS, JavaScript ES6, React and expertise with libraries like Bootstrap,
+          ChakraUI... Beyond traditional development, I'm highly passionate
+          about exploring cutting-edge technologies, such as AR/VR development, cryptocurrencies,
           blockchain, and DeFi{" "}
-          <Tooltip label={`$ ${bitcoinPrice}`}>
+          <Tooltip label={`$ ${bitcoinPrice}`} fontSize='lg'>
             <Image
               src="Bitcoin.png"
               alt="Bitcoin Logo"
@@ -91,7 +91,7 @@ const AboutSection = () => {
               marginRight={2}
             />
           </Tooltip>
-          <Tooltip label={`$ ${ethereumPrice}`}>
+          <Tooltip label={`$ ${ethereumPrice}`} fontSize='lg'>
             <Image
               src="ethereum.svg"
               alt="Ethereum Logo"
@@ -105,7 +105,7 @@ const AboutSection = () => {
         <Text fontSize={{ base: "lg", md: "xl" }}>
           As my{" "}
           <span className="textblue">
-            <Tooltip label="ISTP">Personality type</Tooltip>
+            <Tooltip label="ISTP" fontSize='lg'>Personality type</Tooltip>
           </span>{" "}
           shows, i'm built to tackle problems and build cool stuff. You can check my{" "}
           <Link

@@ -3,12 +3,13 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { VStack, HStack, Heading, Text, Image } from "@chakra-ui/react";
 import { useMediaQuery } from "react-responsive";
+import { Spinner, Box } from "@chakra-ui/react";
 
 const CardLeft = ({ title, description, imageSrc }) => {
   const isMobile = useMediaQuery({ maxWidth: 750 });
   const [isHovered, setIsHovered] = useState(false);
   const openGithubUrl = () => {
-    window.open(`https://github.com/royMatar/little-lemon`, "_blank");
+    window.open(`https://github.com/royMatar/electro-plating`, "_blank");
   };
 
   return (
@@ -18,7 +19,7 @@ const CardLeft = ({ title, description, imageSrc }) => {
           onClick={openGithubUrl}
           color="white"
           backgroundColor="black"
-          cursor="pointer"
+          cursor="wait"
           borderRadius="xl"
           borderWidth={1}
           borderColor={isHovered ? "#1e80ff" : "black"}
@@ -28,8 +29,22 @@ const CardLeft = ({ title, description, imageSrc }) => {
             transition: "border-color 0.3s ease", // Add the transition property
           }}
         >
-          <Image borderRadius="xl" src={imageSrc} alt={title} width={350} />
-
+          {/* <Image borderRadius="xl" src={imageSrc} alt={title} width={350} /> */}
+          <Box
+            width={450}
+            height={300}
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+          >
+            <Spinner
+              thickness="4px"
+              speed="0.65s"
+              emptyColor="gray.200"
+              color="blue.500"
+              size="xl"
+            />
+          </Box>
           <VStack spacing={4} p={4} alignItems="flex-start">
             <HStack justifyContent="space-between" alignItems="center">
               <Heading as="h3" size="lg">
@@ -50,7 +65,7 @@ const CardLeft = ({ title, description, imageSrc }) => {
           onClick={openGithubUrl}
           color="white"
           backgroundColor="black"
-          cursor="pointer"
+          cursor="wait"
           borderRadius="xl"
           borderWidth={1}
           borderColor={isHovered ? "#1e80ff" : "black"}
@@ -74,7 +89,22 @@ const CardLeft = ({ title, description, imageSrc }) => {
               <FontAwesomeIcon icon={faArrowRight} size="1x" />
             </HStack>
           </VStack>
-          <Image borderRadius="xl" src={imageSrc} alt={title} width={450} />
+          {/* <Image borderRadius="xl" src={imageSrc} alt={title} width={450} /> */}
+          <Box
+            width={450}
+            height={300}
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+          >
+            <Spinner
+              thickness="4px"
+              speed="0.65s"
+              emptyColor="gray.200"
+              color="blue.500"
+              size="xl"
+            />
+          </Box>
         </HStack>
       )}
     </>

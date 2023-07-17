@@ -9,6 +9,7 @@ import {
   Heading,
   Input,
   Select,
+  Text,
   Textarea,
   VStack,
 } from "@chakra-ui/react";
@@ -86,8 +87,8 @@ const ContactMeSection = () => {
         mx="auto"
         id="contactform"
       >
-        <Heading as="h3" id="contactme-section">
-          Contact Me
+        <Heading as="h3" id="contactme-section" mb={12}>
+          Contact
         </Heading>
         <Box rounded="md" w="100%" maxW="500px">
           <form onSubmit={formik.handleSubmit}>

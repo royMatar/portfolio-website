@@ -33,9 +33,9 @@ const ProjectsSection = () => {
           imageSrc={"littlelemon.png"}
         />
         <CardLeft
-          title={"Little Lemon Restaurant"}
+          title={"ElectroPlating LB"}
           description={
-            "The Little Lemon restaurant website, part of the Meta Front-End Developer Professional Certificate Capstone Project, aims to create a responsive UI for the booking table component. Figma was used for design, while React, CSS, Bootstrap, and other UI libraries were employed for development. The goal is to ensure optimal user experience on various devices and screen sizes."
+            "Currently in progress: Creating a dynamic website for a leading electroplating company based in Lebanon"
           }
           imageSrc={"littlelemon.png"}
         />
