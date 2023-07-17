@@ -31,8 +31,8 @@ const CardLeft = ({ title, description, imageSrc }) => {
         >
           {/* <Image borderRadius="xl" src={imageSrc} alt={title} width={350} /> */}
           <Box
-            width={450}
-            height={300}
+            width={250}
+            height={150}
             display="flex"
             justifyContent="center"
             alignItems="center"
