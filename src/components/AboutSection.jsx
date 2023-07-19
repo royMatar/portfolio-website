@@ -65,7 +65,7 @@ const AboutSection = () => {
           <Link
             className="textblue"
             color={"#1e80ff"}
-            href="Roy-Matar-CV.pdf"
+            href="Roy Matar CV.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
