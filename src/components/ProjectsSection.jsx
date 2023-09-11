@@ -5,7 +5,6 @@ import Card from "./Card";
 import CardLeft from "./Card2";
 
 
-// url: "https://github.com/royMatar/little-lemon",
 
 const ProjectsSection = () => {
   return (
@@ -33,11 +32,11 @@ const ProjectsSection = () => {
           imageSrc={"littlelemon.png"}
         />
         <CardLeft
-          title={"ElectroPlating LB"}
+          title={"ElectroPlating-LB"}
           description={
-            "Currently in progress: Creating a dynamic website for a leading electroplating company based in Lebanon"
+            "Website for a leading electroplating and surface treatment for various products located in Lebanon. Designed using Framer and built using react bootstrap, Redux for state management, Framer motion for animation, and Formspree library for form integration"
           }
-          imageSrc={"littlelemon.png"}
+          imageSrc={"electroplating-lb2.png"}
         />
         </VStack>
         

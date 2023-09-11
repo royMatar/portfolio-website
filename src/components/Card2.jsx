@@ -9,7 +9,7 @@ const CardLeft = ({ title, description, imageSrc }) => {
   const isMobile = useMediaQuery({ maxWidth: 750 });
   const [isHovered, setIsHovered] = useState(false);
   const openGithubUrl = () => {
-    window.open(`https://github.com/royMatar/electro-plating`, "_blank");
+    window.open(`https://electroplating-lb.com/`, "_blank");
   };
 
   return (
@@ -26,11 +26,11 @@ const CardLeft = ({ title, description, imageSrc }) => {
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
           style={{
-            transition: "border-color 0.3s ease", // Add the transition property
+            transition: "border-color 0.3s ease", 
           }}
         >
-          {/* <Image borderRadius="xl" src={imageSrc} alt={title} width={350} /> */}
-          <Box
+          <Image borderRadius="xl" src={imageSrc} alt={title} width={350}/>
+          {/* <Box
             width={250}
             height={150}
             display="flex"
@@ -44,7 +44,7 @@ const CardLeft = ({ title, description, imageSrc }) => {
               color="blue.500"
               size="xl"
             />
-          </Box>
+          </Box> */}
           <VStack spacing={4} p={4} alignItems="flex-start">
             <HStack justifyContent="space-between" alignItems="center">
               <Heading as="h3" size="lg">
@@ -55,7 +55,7 @@ const CardLeft = ({ title, description, imageSrc }) => {
               {description}
             </Text>
             <HStack spacing={2} alignItems="center" color="#1e80ff">
-              <span>See more</span>
+              <span>Open website</span>
               <FontAwesomeIcon icon={faArrowRight} size="1x" />
             </HStack>
           </VStack>
@@ -65,14 +65,14 @@ const CardLeft = ({ title, description, imageSrc }) => {
           onClick={openGithubUrl}
           color="white"
           backgroundColor="black"
-          cursor="wait"
+          cursor="pointer"
           borderRadius="xl"
           borderWidth={1}
           borderColor={isHovered ? "#1e80ff" : "black"}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
           style={{
-            transition: "border-color 0.3s ease", // Add the transition property
+            transition: "border-color 0.3s ease",
           }}
         >
           <VStack spacing={4} p={4} alignItems="flex-start">
@@ -85,12 +85,12 @@ const CardLeft = ({ title, description, imageSrc }) => {
               {description}
             </Text>
             <HStack spacing={2} alignItems="center" color="#1e80ff">
-              <span>See more</span>
+              <span>Go to electroplating-lb.com</span>
               <FontAwesomeIcon icon={faArrowRight} size="1x" />
             </HStack>
           </VStack>
-          {/* <Image borderRadius="xl" src={imageSrc} alt={title} width={450} /> */}
-          <Box
+          <Image borderRadius="xl" src={imageSrc} alt={title} width={450} />
+          {/* <Box
             width={450}
             height={300}
             display="flex"
@@ -104,7 +104,7 @@ const CardLeft = ({ title, description, imageSrc }) => {
               color="blue.500"
               size="xl"
             />
-          </Box>
+          </Box> */}
         </HStack>
       )}
     </>

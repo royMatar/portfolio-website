@@ -16,7 +16,7 @@ export const handleClick = (anchor) => () => {
 
 const Header = () => {
   const headerRef = useRef(null);
-  const [isSmallScreen] = useMediaQuery("(max-width: 768px)"); // Adjust the screen size as per your needs
+  const [isSmallScreen] = useMediaQuery("(max-width: 768px)");
 
   useEffect(() => {
     let prevScrollPos = window.scrollY;
@@ -42,8 +42,6 @@ const Header = () => {
   }, []);
 
 
-  
-
   return (
     <Box
       position="fixed"
@@ -56,6 +54,7 @@ const Header = () => {
       transitionTimingFunction="ease-in-out"
       backgroundColor="#000000"
       ref={headerRef}
+      zIndex={1000}
     >
       <Box color="white" maxWidth="1280px" margin="0 auto">
         <HStack

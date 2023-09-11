@@ -38,7 +38,7 @@ const Card = ({ title, description, imageSrc }) => {
               {description}
             </Text>
             <HStack spacing={2} alignItems="center" color="#1e80ff">
-              <span>See more</span>
+              <span>View Source Code</span>
               <FontAwesomeIcon icon={faArrowRight} size="1x" />
             </HStack>
           </VStack>
@@ -69,7 +69,7 @@ const Card = ({ title, description, imageSrc }) => {
               {description}
             </Text>
             <HStack spacing={2} alignItems="center" color="#1e80ff">
-              <span>See more</span>
+              <span>View Source Code</span>
               <FontAwesomeIcon icon={faArrowRight} size="1x" />
             </HStack>
           </VStack>

@@ -16,9 +16,10 @@ const LandingSection = () => (
     <VStack spacing={16}>
       <VStack spacing={4} alignItems="center" >
         <Avatar
-          src="profile.jpeg"
+          src="profile-roy2.jpeg"
           size="2xl"
           name="Your Name"
+          style={{borderWidth:'2px', borderColor:'#1e80ff'}}
         />
         <Heading as="h4" size="md" noOfLines={2}>
           {greeting}
