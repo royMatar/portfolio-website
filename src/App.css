@@ -58,6 +58,53 @@ a:hover>svg {
     font-size: larger;
 }
 
+
+.profile-image {
+    height: 180px;
+    animation: changeBorderRadius 3s infinite cubic-bezier(0.42, 0, 0.58, 1);
+    transition: all 0.3s ease;
+    filter: grayscale(100%);
+
+}
+
+@keyframes changeBorderRadius {
+
+    0%,
+    100% {
+        border-top-left-radius: 50%;
+        border-top-right-radius: 20%;
+        border-bottom-left-radius: 20%;
+        border-bottom-right-radius: 50%;
+
+    }
+
+    25% {
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+        border-bottom-left-radius: 20%;
+        border-bottom-right-radius: 20%;
+
+    }
+
+    /* 50% {
+        border-top-left-radius: 50%;
+        border-top-right-radius: 30%;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+    } */
+    75% {
+
+        border-top-left-radius: 20%;
+        border-top-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 20%;
+    }
+}
+
+
+
+
+
 @media screen and (max-width: 800px) {
     #contactform {
         width: 350px;
@@ -68,4 +115,3 @@ a:hover>svg {
         /* Adjust the width of the slider container */
     }
 }
-

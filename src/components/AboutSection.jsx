@@ -5,7 +5,6 @@ import { Link } from "@chakra-ui/react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { Tooltip } from "@chakra-ui/react";
 import { handleClick } from "./Header";
-import SlickAutoPlay from "./Slick";
 
 const AboutSection = () => {
   const [bitcoinPrice, setBitcoinPrice] = useState(null);
@@ -131,7 +130,10 @@ const AboutSection = () => {
         </Text>
         <br />
 
-        <Text
+
+
+
+        {/* <Text
           fontSize={{ base: "lg", md: "xl" }}
           fontStyle="italic"
           fontWeight="bold"
@@ -141,7 +143,7 @@ const AboutSection = () => {
           "The biggest risk is not taking any risk. In a world that's changing
           quickly, the only strategy that is guaranteed to fail is not taking
           risks." - Mark Zuckerberg .
-        </Text>
+        </Text> */}
 
         {/* <SlickAutoPlay /> */}
       </Box>
