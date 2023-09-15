@@ -86,12 +86,11 @@ a:hover>svg {
 
     }
 
-    /* 50% {
-        border-top-left-radius: 50%;
-        border-top-right-radius: 30%;
-        border-bottom-left-radius: 50%;
-        border-bottom-right-radius: 50%;
-    } */
+    50% {
+        filter: invert(100%);
+    }
+
+    
     75% {
 
         border-top-left-radius: 20%;
