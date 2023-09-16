@@ -79,7 +79,7 @@ const ContactMeSection = () => {
       spacing={8}
     >
       <VStack
-        p={8}
+        p={4}
         alignItems="center"
         spacing={4}
         maxW="1024px"

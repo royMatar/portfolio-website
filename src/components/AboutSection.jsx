@@ -34,7 +34,7 @@ const AboutSection = () => {
       </Heading>
       <Box
         rounded="md"
-        w={{ base: "100%", md: "80%", lg: "60%" }}
+        w={{ base: "100%", md: "80%", lg: "100%" }}
         maxW="auto"
         color="white"
         padding="20px"

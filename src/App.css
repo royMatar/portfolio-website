@@ -81,16 +81,10 @@ a:hover>svg {
     25% {
         border-top-left-radius: 50%;
         border-top-right-radius: 50%;
-        border-bottom-left-radius: 20%;
-        border-bottom-right-radius: 20%;
+        border-bottom-left-radius: 10%;
+        border-bottom-right-radius: 10%;
 
     }
-
-    50% {
-        filter: invert(100%);
-    }
-
-    
     75% {
 
         border-top-left-radius: 20%;
