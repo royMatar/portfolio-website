@@ -18,6 +18,8 @@ import FullScreenSection from "./FullScreenSection";
 import useSubmit from "../hooks/useSubmit";
 import { useAlertContext } from "../context/alertContext";
 import "../App.css";
+import { useInView } from "react-intersection-observer";
+import "animate.css";
 
 const ContactMeSection = () => {
   const { isLoading, response, submit } = useSubmit();
@@ -71,6 +73,11 @@ const ContactMeSection = () => {
     }
   }, [response]);
 
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+    threshold: 0.5,
+  });
+
   return (
     <FullScreenSection
       isDarkBackground
@@ -87,16 +94,23 @@ const ContactMeSection = () => {
         mx="auto"
         id="contactform"
       >
-        <Heading as="h3" id="contactme-section" mb={12}>
+        <Heading as="h3" id="contactme-section" mb={12} className={inView ? "animate__animated animate__zoomIn" : "animate__animated animate__zoomOut"}
+          ref={ref}>
           Contact
         </Heading>
         <Box rounded="md" w="100%" maxW="500px">
-          <form onSubmit={formik.handleSubmit}>
+          <form onSubmit={formik.handleSubmit} className={
+                  inView
+                    ? "animate__animated animate__zoomIn"
+                    : "animate__animated animate__zoomOut"
+                }
+                ref={ref}>
             <VStack spacing={4} alignItems="stretch">
               <FormControl
                 isInvalid={
                   !!formik.errors.firstName && formik.touched.firstName
                 }
+                
               >
                 <FormLabel htmlFor="firstName">
                   Name <span className="bluecolor">*</span>
@@ -110,6 +124,7 @@ const ContactMeSection = () => {
               </FormControl>
               <FormControl
                 isInvalid={!!formik.errors.email && formik.touched.email}
+                
               >
                 <FormLabel htmlFor="email">
                   Email Address <span className="bluecolor">*</span>
@@ -122,18 +137,9 @@ const ContactMeSection = () => {
                 />
                 <FormErrorMessage>{formik.errors.email}</FormErrorMessage>
               </FormControl>
-              {/* <FormControl style={{ backgroundColor: 'black'}}>
-                <FormLabel htmlFor="type" >Type of enquiry</FormLabel>
-                <Select id="type" name="type" {...formik.getFieldProps("type")}>
-                  <option value="hireMe" style={{ backgroundColor: 'black' }}>Freelance project proposal</option>
-                  <option value="openSource" style={{ backgroundColor: 'black' }}>
-                    Open source consultancy session
-                  </option>
-                  <option value="other" style={{ backgroundColor: 'black' }}>Other</option>
-                </Select>
-              </FormControl> */}
               <FormControl
                 isInvalid={!!formik.errors.comment && formik.touched.comment}
+                
               >
                 <FormLabel htmlFor="comment">
                   Your message <span className="bluecolor">*</span>
@@ -146,12 +152,16 @@ const ContactMeSection = () => {
                 />
                 <FormErrorMessage>{formik.errors.comment}</FormErrorMessage>
               </FormControl>
-              <Button type="submit" colorScheme="blue" isLoading={isLoading}>
+              <Button
+                type="submit"
+                colorScheme="blue"
+                isLoading={isLoading}
+                
+              >
                 Submit
               </Button>
             </VStack>
           </form>
-          
         </Box>
       </VStack>
     </FullScreenSection>

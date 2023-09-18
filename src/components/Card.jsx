@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { VStack, HStack, Heading, Text, Image, Link } from "@chakra-ui/react";
 import { useMediaQuery } from "react-responsive";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
+import { useInView } from "react-intersection-observer";
+import "animate.css";
 
 const Card = ({ title, description, imageSrc }) => {
   const isMobile = useMediaQuery({ maxWidth: 750 });
@@ -11,6 +13,11 @@ const Card = ({ title, description, imageSrc }) => {
   const openGithubUrl = () => {
     window.open(`https://github.com/royMatar/little-lemon`, "_blank");
   };
+
+  const { ref, inView } = useInView({
+    triggerOnce: false, // Animation triggers only once when the component comes into view
+    threshold: 0.5, // Adjust this threshold as needed (0.5 means 50% of the component is visible)
+  });
   return (
     <>
       {isMobile ? (
@@ -23,6 +30,8 @@ const Card = ({ title, description, imageSrc }) => {
           style={{
             transition: "border-color 0.3s ease", // Add the transition property
           }}
+          className={inView ? "animate__animated animate__zoomInLeft" : "animate__animated animate__fadeOut"}
+        ref={ref}
         >
           <Image borderRadius="20%" src={imageSrc} alt={title} width={350} />
           <VStack spacing={4} p={4} alignItems="flex-start">
@@ -51,6 +60,8 @@ const Card = ({ title, description, imageSrc }) => {
           style={{
             transition: "border-color 0.3s ease", // Add the transition property
           }}
+          className={inView ? "animate__animated animate__zoomInLeft" : "animate__animated animate__fadeOut"}
+        ref={ref}
         >
           <Image borderRadius="20%" src={imageSrc} alt={title} width={450} />
           <VStack spacing={4} p={4} alignItems="flex-start">

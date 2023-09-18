@@ -9,7 +9,7 @@ import "animate.css/animate.min.css";
 const LandingSection = () => {
   const { ref, inView } = useInView({
     triggerOnce: false,
-    threshold: 0.5,
+    threshold: 0.9,
   });
 
   return (
@@ -20,28 +20,48 @@ const LandingSection = () => {
       backgroundColor="#000000"
     >
       <VStack spacing={10}>
-        <VStack
-          spacing={2}
-          alignItems="center"
-          className={inView ? "animate__animated animate__zoomInDown" : ""}
-          ref={ref}
-        >
-          <Image
-            src="profile-roy2.jpeg"
-            alt="Profile"
-            className="profile-image"
-          />
-          <Heading as="h4" size="md" noOfLines={2}>
+        <VStack spacing={2} alignItems="center">
+          <div
+            className={
+              inView
+                ? "animate__animated animate__zoomInDown"
+                : "animate__animated animate__fadeOut"
+            }
+            ref={ref}
+          >
+            <Image
+              src="profile-roy2.jpeg"
+              alt="Profile"
+              className="profile-image"
+            />
+          </div>
+
+          <Heading
+            as="h4"
+            size="md"
+            noOfLines={2}
+            className={
+              inView
+                ? "animate__animated animate__zoomInDown"
+                : "animate__animated animate__fadeOut"
+            }
+            ref={ref}
+          >
             Hello, I am Roy!
           </Heading>
         </VStack>
-        <VStack spacing={2} className={inView ? "animate__animated animate__bounceIn" : ''} ref={ref}>
+        <VStack spacing={2}>
           <Heading
             as="h1"
             size="3xl"
             noOfLines={2}
             textAlign="center"
-            className={inView ? "animate__animated animate__zoomInLeft" : ''} ref={ref}
+            className={
+              inView
+                ? "animate__animated animate__zoomInLeft"
+                : "animate__animated animate__fadeOut"
+            }
+            ref={ref}
           >
             Front-End Developer
           </Heading>
@@ -50,7 +70,13 @@ const LandingSection = () => {
             size="3xl"
             noOfLines={3}
             textAlign="center"
-            className={inView ? "animate__animated animate__zoomInRight" : ''} ref={ref}          >
+            className={
+              inView
+                ? "animate__animated animate__zoomInRight"
+                : "animate__animated animate__fadeOut"
+            }
+            ref={ref}
+          >
             Specialized in <span className="bluecolor">React</span>
           </Heading>
         </VStack>
@@ -67,7 +93,13 @@ const LandingSection = () => {
             target="_blank"
             rel="noopener noreferrer"
             style={{ marginLeft: "10px" }}
-            className={inView ? "animate__animated animate__flip" : ''} ref={ref}          >
+            className={
+              inView
+                ? "animate__animated animate__flip"
+                : "animate__animated animate__fadeOut"
+            }
+            ref={ref}
+          >
             Download CV
           </Link>
         </HStack>
