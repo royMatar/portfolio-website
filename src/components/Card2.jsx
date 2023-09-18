@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { VStack, HStack, Heading, Text, Image, Link } from "@chakra-ui/react";
 import { useMediaQuery } from "react-responsive";
+import { ExternalLinkIcon } from "@chakra-ui/icons";
 
 const CardLeft = ({ title, description, imageSrc }) => {
   const isMobile = useMediaQuery({ maxWidth: 750 });
@@ -37,7 +38,7 @@ const CardLeft = ({ title, description, imageSrc }) => {
             </Text>
             <HStack spacing={2} alignItems="center" color="#1e80ff">
               <Link onClick={openGithubUrl}>
-                Open website <FontAwesomeIcon icon={faArrowRight} size="1x" />
+                Open website <ExternalLinkIcon mx="2px" />
               </Link>
             </HStack>
           </VStack>
@@ -64,8 +65,8 @@ const CardLeft = ({ title, description, imageSrc }) => {
               {description}
             </Text>
             <HStack spacing={2} alignItems="center" color="#1e80ff">
-            <Link onClick={openGithubUrl}>
-                Open website <FontAwesomeIcon icon={faArrowRight} size="1x" />
+              <Link onClick={openGithubUrl}>
+                Open website <ExternalLinkIcon mx="2px" />
               </Link>
             </HStack>
           </VStack>
