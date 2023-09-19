@@ -74,7 +74,7 @@ const ContactMeSection = () => {
   }, [response]);
 
   const { ref, inView } = useInView({
-    triggerOnce: false,
+    triggerOnce: true,
     threshold: 0.5,
   });
 
@@ -94,7 +94,7 @@ const ContactMeSection = () => {
         mx="auto"
         id="contactform"
       >
-        <Heading as="h3" id="contactme-section" mb={12} className={inView ? "animate__animated animate__zoomIn" : "animate__animated animate__zoomOut"}
+        <Heading as="h3" id="contactme-section" mb={12} className={inView ? "animate__animated animate__zoomIn" : ""}
           ref={ref}>
           Contact
         </Heading>
@@ -102,7 +102,7 @@ const ContactMeSection = () => {
           <form onSubmit={formik.handleSubmit} className={
                   inView
                     ? "animate__animated animate__zoomIn"
-                    : "animate__animated animate__zoomOut"
+                    : ""
                 }
                 ref={ref}>
             <VStack spacing={4} alignItems="stretch">

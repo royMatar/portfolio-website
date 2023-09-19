@@ -33,7 +33,7 @@ const Card = ({ title, description, imageSrc }) => {
           className={inView ? "animate__animated animate__zoomInLeft" : "animate__animated animate__fadeOut"}
         ref={ref}
         >
-          <Image borderRadius="20%" src={imageSrc} alt={title} width={350} />
+          <Image borderRadius="10%" src={imageSrc} alt={title} width={350} />
           <VStack spacing={4} p={4} alignItems="flex-start">
             <HStack justifyContent="space-between" alignItems="center">
               <Heading as="h3" size="lg">
@@ -63,7 +63,7 @@ const Card = ({ title, description, imageSrc }) => {
           className={inView ? "animate__animated animate__zoomInLeft" : "animate__animated animate__fadeOut"}
         ref={ref}
         >
-          <Image borderRadius="20%" src={imageSrc} alt={title} width={450} />
+          <Image borderRadius="10%" src={imageSrc} alt={title} width={450} />
           <VStack spacing={4} p={4} alignItems="flex-start">
             <HStack justifyContent="space-between" alignItems="center">
               <Heading as="h3" size="lg">

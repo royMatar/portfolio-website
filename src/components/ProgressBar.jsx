@@ -3,17 +3,16 @@ import { CircularProgress, CircularProgressLabel } from "@chakra-ui/react";
 import { useInView } from "react-intersection-observer";
 import "animate.css";
 
-const ProgressBar = () => {
+const ProgressBar = (props) => {
   const { ref, inView } = useInView({
     triggerOnce: false, // Animation triggers only once when the component comes into view
     threshold: 0.8, // Adjust this threshold as needed (0.5 means 50% of the component is visible)
   });
 
   const [progressValue, setProgressValue] = useState(0);
-
   useEffect(() => {
     let startValue = inView ? 0 : progressValue; // Adjust start value based on visibility
-    const endValue = inView ? 80 : 0;
+    const endValue = inView ? props.value : 0;
     const duration = 100; // Animation duration in milliseconds
     const increment = ((endValue - startValue) / duration) * 10; // Calculate the increment
 
@@ -37,8 +36,8 @@ const ProgressBar = () => {
     <div>
       <CircularProgress
         value={progressValue}
-        size="120px"
-        thickness="5px"
+        size="60px"
+        thickness="7px"
         className={
           inView
             ? "animate__animated animate__fadeIn"

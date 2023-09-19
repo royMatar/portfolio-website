@@ -21,11 +21,11 @@ const BackgroundCard = () => {
   return (
     <div className={inView ? "animate__animated animate__fadeIn" : "animate__animated animate__fadeOut"}
     ref={ref}>
-      <Card w="100%" bg={cardGradient} color="white" borderRadius="10%"
+      <Card w="100%" bg={cardGradient} color="white" borderRadius="5px"
         boxShadow="lg"
         p="4">
         <CardHeader>
-          <Heading size="md">Background</Heading>
+          <Heading size="md">Background and Experience</Heading>
         </CardHeader>
 
         <CardBody>
@@ -35,7 +35,9 @@ const BackgroundCard = () => {
                 Summary
               </Heading>
               <Text pt="2" fontSize="sm">
-                View a summary of all your clients over the last month.
+                View a summary of all your clients over the last month.  
+
+
               </Text>
             </Box>
             <Box>
@@ -43,7 +45,8 @@ const BackgroundCard = () => {
                 Overview
               </Heading>
               <Text pt="2" fontSize="sm">
-                Check out the overview of your clients.
+                Check out the overview of your clients.              
+
               </Text>
               
             </Box>
@@ -52,7 +55,8 @@ const BackgroundCard = () => {
                 Analysis
               </Heading>
               <Text pt="2" fontSize="sm">
-                See a detailed analysis of all your business clients.
+                See a detailed analysis of all your business clients.       
+
               </Text>
             </Box>
           </Stack>

@@ -19,13 +19,24 @@ const PersonalCard = () => {
     threshold: 0.5, // Adjust this threshold as needed (0.5 means 50% of the component is visible)
   });
   return (
-    <div className={inView ? "animate__animated animate__fadeIn" : "animate__animated animate__fadeOut"}
-    ref={ref}>
-      <Card w="100%" bg={cardGradient} color="white" borderRadius="10%"
+    <div
+      className={
+        inView
+          ? "animate__animated animate__fadeIn"
+          : "animate__animated animate__fadeOut"
+      }
+      ref={ref}
+    >
+      <Card
+        w="100%"
+        bg={cardGradient}
+        color="white"
+        borderRadius="5px"
         boxShadow="lg"
-        p="4">
+        p="4"
+      >
         <CardHeader>
-          <Heading size="md">Personal info</Heading>
+          <Heading size="md">Personal Interests</Heading>
         </CardHeader>
 
         <CardBody>
@@ -35,7 +46,8 @@ const PersonalCard = () => {
                 Summary
               </Heading>
               <Text pt="2" fontSize="sm">
-                View a summary of all your clients over the last month.
+                View a summary of all your clients over the last month.               
+
               </Text>
             </Box>
             <Box>
@@ -43,16 +55,17 @@ const PersonalCard = () => {
                 Overview
               </Heading>
               <Text pt="2" fontSize="sm">
-                Check out the overview of your clients.
+                Check out the overview of your clients.                
+
               </Text>
-              
             </Box>
             <Box>
               <Heading size="xs" textTransform="uppercase">
                 Analysis
               </Heading>
               <Text pt="2" fontSize="sm">
-                See a detailed analysis of all your business clients.
+                See a detailed analysis of all your business clients.       
+
               </Text>
             </Box>
           </Stack>
