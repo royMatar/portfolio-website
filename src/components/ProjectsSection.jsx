@@ -9,7 +9,7 @@ import "animate.css";
 const ProjectsSection = () => {
   const { ref, inView } = useInView({
     triggerOnce: false,
-    threshold: 0.5,
+    threshold: 0.4,
   });
   return (
     <FullScreenSection
@@ -18,11 +18,14 @@ const ProjectsSection = () => {
       p={4}
       spacing={24}
     >
-      <Heading as="h1" id="projects-section" className={inView ? "animate__animated animate__zoomIn" : ""}
-          ref={ref}>
+      <Heading
+        as="h1"
+        id="projects-section"
+        className={inView ? "animate__animated animate__zoomIn" : ""}
+        ref={ref}
+      >
         Projects
       </Heading>
-
       <Box
         display="grid"
         gridTemplateColumns="repeat(auto-fit, minmax(250px, 1fr))"

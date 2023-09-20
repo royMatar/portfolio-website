@@ -1,21 +1,18 @@
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import React, { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from "react";
 import { VStack, HStack, Heading, Text, Image, Link } from "@chakra-ui/react";
 import { useMediaQuery } from "react-responsive";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
-import { useInView } from "react-intersection-observer";
 import "animate.css";
+import { useInView } from "react-intersection-observer";
 
 const CardLeft = ({ title, description, imageSrc }) => {
   const isMobile = useMediaQuery({ maxWidth: 750 });
-  const [isHovered, setIsHovered] = useState(false);
   const openGithubUrl = () => {
     window.open(`https://electroplating-lb.com/`, "_blank");
   };
   const { ref, inView } = useInView({
-    triggerOnce: false, // Animation triggers only once when the component comes into view
-    threshold: 0.5, // Adjust this threshold as needed (0.5 means 50% of the component is visible)
+    triggerOnce: false,
+    threshold: 0.5,
   });
   return (
     <>
@@ -24,16 +21,10 @@ const CardLeft = ({ title, description, imageSrc }) => {
           color="white"
           backgroundColor="black"
           borderRadius="xl"
-          borderColor={isHovered ? "#1e80ff" : "black"}
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-          style={{
-            transition: "border-color 0.3s ease",
-          }}
           className={
             inView
-              ? "animate__animated animate__zoomInRight"
-              : "animate__animated animate__fadeOut"
+              ? "animate__animated animate__zoomIn"
+              : "animate__animated animate__zoomOut"
           }
           ref={ref}
         >
@@ -59,16 +50,10 @@ const CardLeft = ({ title, description, imageSrc }) => {
           color="white"
           backgroundColor="black"
           borderRadius="xl"
-          borderColor={isHovered ? "#1e80ff" : "black"}
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-          style={{
-            transition: "border-color 0.3s ease",
-          }}
           className={
             inView
-              ? "animate__animated animate__zoomInRight"
-              : "animate__animated animate__fadeOut"
+              ? "animate__animated animate__zoomIn"
+              : "animate__animated animate__zoomOut"
           }
           ref={ref}
         >

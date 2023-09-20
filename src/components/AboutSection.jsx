@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  Box,
-  Heading,
-  VStack,
-  HStack,
-  useMediaQuery,
-} from "@chakra-ui/react";
+import { Box, Heading, VStack, HStack, useMediaQuery } from "@chakra-ui/react";
 import { useInView } from "react-intersection-observer";
 import FullScreenSection from "./FullScreenSection";
 import IntroCard from "./IntroCard";
@@ -15,7 +9,7 @@ import BackgroundCard from "./BackgroundCard";
 const AboutSection = () => {
   const [isMobile] = useMediaQuery("(max-width: 768px)");
   const { ref, inView } = useInView({
-    triggerOnce: false,
+    triggerOnce: true,
     threshold: 0.5,
   });
 
@@ -40,14 +34,14 @@ const AboutSection = () => {
       >
         {isMobile ? (
           <VStack spacing={8}>
-            <IntroCard />
             <SkillsCard />
+            <IntroCard />
           </VStack>
         ) : (
-          <VStack spacing={8}>
+          <HStack spacing={8}>
+            <SkillsCard />
             <IntroCard />
-              <SkillsCard />
-          </VStack>
+          </HStack>
         )}
       </Box>
     </FullScreenSection>

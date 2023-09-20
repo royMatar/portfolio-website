@@ -1,6 +1,4 @@
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import React, { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { VStack, HStack, Heading, Text, Image, Link } from "@chakra-ui/react";
 import { useMediaQuery } from "react-responsive";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
@@ -9,7 +7,6 @@ import "animate.css";
 
 const Card = ({ title, description, imageSrc }) => {
   const isMobile = useMediaQuery({ maxWidth: 750 });
-  const [isHovered, setIsHovered] = useState(false);
   const openGithubUrl = () => {
     window.open(`https://github.com/royMatar/little-lemon`, "_blank");
   };
@@ -24,14 +21,12 @@ const Card = ({ title, description, imageSrc }) => {
         <VStack
           color="white"
           backgroundColor="black"
-          borderColor={isHovered ? "#1e80ff" : "black"}
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-          style={{
-            transition: "border-color 0.3s ease", // Add the transition property
-          }}
-          className={inView ? "animate__animated animate__zoomInLeft" : "animate__animated animate__fadeOut"}
-        ref={ref}
+          className={
+            inView
+              ? "animate__animated animate__zoomIn"
+              : "animate__animated animate__zoomOut"
+          }
+          ref={ref}
         >
           <Image borderRadius="10%" src={imageSrc} alt={title} width={350} />
           <VStack spacing={4} p={4} alignItems="flex-start">
@@ -54,14 +49,12 @@ const Card = ({ title, description, imageSrc }) => {
         <HStack
           color="white"
           backgroundColor="black"
-          borderColor={isHovered ? "#1e80ff" : "black"}
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-          style={{
-            transition: "border-color 0.3s ease", // Add the transition property
-          }}
-          className={inView ? "animate__animated animate__zoomInLeft" : "animate__animated animate__fadeOut"}
-        ref={ref}
+          className={
+            inView
+              ? "animate__animated animate__zoomIn"
+              : "animate__animated animate__zoomOut"
+          }
+          ref={ref}
         >
           <Image borderRadius="10%" src={imageSrc} alt={title} width={450} />
           <VStack spacing={4} p={4} alignItems="flex-start">

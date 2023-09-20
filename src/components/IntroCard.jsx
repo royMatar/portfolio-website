@@ -13,19 +13,19 @@ import {
 import { useInView } from "react-intersection-observer";
 import "animate.css";
 const IntroCard = () => {
-  const cardGradient = "linear-gradient(to top, #1e80ff,black,black)";
+  const cardGradient = "linear-gradient(to top, black,black,black)";
   const { ref, inView } = useInView({
     triggerOnce: false, // Animation triggers only once when the component comes into view
     threshold: 0.3, // Adjust this threshold as needed (0.5 means 50% of the component is visible)
   });
   return (
     <div
-      // className={
-      //   inView
-      //     ? "animate__animated animate__fadeIn"
-      //     : "animate__animated animate__fadeOut"
-      // }
-      // ref={ref}
+      className={
+        inView
+          ? "animate__animated animate__fadeIn"
+          : "animate__animated animate__fadeOut"
+      }
+      ref={ref}
     >
       <Card
         w="100%"
@@ -37,11 +37,11 @@ const IntroCard = () => {
         h="auto"
       >
         <CardHeader>
-          <Heading size="md">Crafting Code & Embracing Innovation</Heading>
+          <Heading size="md" color='#1e80ff'>Crafting Code & Embracing Innovation</Heading>
         </CardHeader>
 
         <CardBody>
-          <Stack divider={<StackDivider />} spacing="4">
+          <Stack divider={<StackDivider/>} spacing="4">
             <Box>
               {/* <Heading size="xs" textTransform="uppercase">
                 Summary
@@ -56,7 +56,7 @@ const IntroCard = () => {
               </Text>
             </Box>
             <Box>
-              <Heading size="xs" textTransform="uppercase">
+              <Heading size="xs" textTransform="uppercase" color='#1e80ff'>
                 Building the Future, One Line of Code at a Time
               </Heading>
               <Text pt="2" fontSize="sm">
@@ -67,7 +67,7 @@ const IntroCard = () => {
               </Text>
             </Box>
             <Box>
-              <Heading size="xs" textTransform="uppercase">
+              <Heading size="xs" textTransform="uppercase" color='#1e80ff'>
                 A Hunger for Learning & Growth
               </Heading>
               <Text pt="2" fontSize="sm">
@@ -78,7 +78,7 @@ const IntroCard = () => {
               </Text>
             </Box>
             <Box>
-              <Heading size="xs" textTransform="uppercase">
+              <Heading size="xs" textTransform="uppercase" color='#1e80ff'>
                 Let's Code Something Remarkable Together
               </Heading>
               <Text pt="2" fontSize="sm">
