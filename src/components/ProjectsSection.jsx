@@ -8,7 +8,7 @@ import "animate.css";
 
 const ProjectsSection = () => {
   const { ref, inView } = useInView({
-    triggerOnce: false,
+    triggerOnce: true,
     threshold: 0.4,
   });
   return (
@@ -32,19 +32,29 @@ const ProjectsSection = () => {
         gridGap={8}
       >
         <VStack spacing={32}>
-          <Card
-            title={"Little Lemon Restaurant"}
-            description={
-              "The Little Lemon restaurant website, the Meta Front-End Developer Professional Certificate Capstone Project."
-            }
-            imageSrc={"littlelemon.png"}
-          />
           <CardLeft
             title={"ElectroPlating-LB"}
             description={
               "Website for a leading electroplating and surface treatment for various products located in Lebanon."
             }
             imageSrc={"electroplating-lb2.png"}
+            url={"https://electroplating-lb.com/"}
+          />
+          <Card
+            title={"SEF Liban"}
+            description={
+              "Sefliban.com website for an ngo in Lebanon created for volunteering and donations"
+            }
+            imageSrc={"SEF-image.png"}
+            url={"https://sefliban.com"}
+          />
+          <CardLeft
+            title={"Olivia Andaket-LB"}
+            description={
+              "Designed and developed the UI of the dynamic website in collaboration with CreaSoft."
+            }
+            imageSrc={"Olivia-image.png"}
+            url={"https://olivia-lb.com"}
           />
         </VStack>
       </Box>

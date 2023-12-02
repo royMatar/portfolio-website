@@ -1,20 +1,9 @@
 import React, { useEffect } from "react";
 import {
-  Box,
-  Button,
-  FormControl,
-  FormErrorMessage,
-  FormLabel,
-  Heading,
-  Input,
-  Select,
-  Text,
-  Textarea,
   VStack,
   HStack,
 } from "@chakra-ui/react";
 import FullScreenSection from "./FullScreenSection";
-import GoogleMap from "./GoogleMap";
 import ContactForm from "./ContactForm";
 import { useMediaQuery } from "react-responsive";
 

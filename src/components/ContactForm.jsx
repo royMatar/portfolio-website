@@ -99,7 +99,7 @@ const ContactForm = () => {
           as="h3"
           id="contactme-section"
           mb={12}
-          className={inView ? "animate__animated animate__zoomIn" : ""}
+          className={inView ? "animate__animated animate__fadeIn" : ""}
           ref={ref}
         >
           Contact
@@ -107,7 +107,7 @@ const ContactForm = () => {
         <Box rounded="md" w="100%" maxW="500px">
           <form
             onSubmit={formik.handleSubmit}
-            className={inView ? "animate__animated animate__zoomIn" : ""}
+            className={inView ? "animate__animated animate__fadeIn" : ""}
             ref={ref}
           >
             <VStack spacing={4} alignItems="stretch">

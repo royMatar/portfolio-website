@@ -31,6 +31,8 @@ const SkillsCard = () => {
     { label: "CSS", value: 80 },
     { label: "JavaScript ES6", value: 85 },
     { label: "ReactJS", value: 88 },
+    {label: "Python", value: 70},
+    {label:"SQL", value: 70},
   ];
   return (
     <div
@@ -45,7 +47,6 @@ const SkillsCard = () => {
         w="100%"
         bg={cardGradient}
         color="white"
-        borderRadius="5px"
         boxShadow="lg"
         p="4"
       >
@@ -55,14 +56,14 @@ const SkillsCard = () => {
 
         <CardBody>
           <VStack divider={<StackDivider />} spacing="4">
-            <Box mt="4">
+            <Box mt="2">
               <Heading size="xs" textTransform="uppercase">
                 Technical Skills
               </Heading>
               <Stack divider={<StackDivider />} spacing="4">
                 {skills.map((skill, index) => (
                   <Box key={index} display="flex" alignItems="center">
-                    <Heading size="xs" textTransform="uppercase" flex="0 0 80%">
+                    <Heading size="xs" textTransform="uppercase" flex="0 0 100%">
                       {skill.label}
                     </Heading>
                     <ProgressBar
